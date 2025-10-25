@@ -21,7 +21,7 @@
 </div>
 
 ---
-
+<!--
 ## 🔥 **最新动态**
 > 待办事项:
 > 
@@ -30,7 +30,7 @@
 > **[2025-XX-XX]** 📖 [可交互的 Colab 教程已上线](colab-link)
 >
 > **[2025-XX-XX]** 🤗 [模型已上传至 HuggingFace Hub](huggingface-link)
-
+-->
 
 ## 🔬 研究背景
 - **背景**: 机器视觉系统在理想环境下表现出色，但在真实世界的部署中，图像失真会严重降低其性能。传统的图像质量评估优先考虑人类的感知保真度，这与机器的“敏感点”存在根本性的错位。
@@ -94,155 +94,193 @@ pip install -r requirements.txt
 ---
 
 ## 📦 模型权重与性能
+<details open>
+<summary> 综合指标 </summary>
+
+| **方法**              | **图像分类** <br> (SRCC / PLCC 和下载链接) | **目标检测** <br> (SRCC / PLCC 和下载链接) | **实例分割** <br> (SRCC / PLCC 和下载链接) | **训练标签类型** |
+|:--------------------|:---:|:---:|:---:|:---:|
+| **ResNet-18**       | `0.5131 / 0.5427` <br> [**Google Drive**](https://drive.google.com/file/d/1zq03_TRYbg1zYEilP66x6HXpUUQ2sV_H/view?usp=sharing) | `0.7541 / 0.7734` <br> [**Google Drive**](https://drive.google.com/file/d/1_5mP7nOc2kla6l4QaTBBs5Xlj4hSu9dE/view?usp=sharing) | `0.7582 / 0.7790` <br> [**Google Drive**](https://drive.google.com/file/d/1umqAI4MiqfPK7dPiro6im_vDA_zrNfRO/view?usp=sharing) | 综合得分 |
+| **ResNet-50**       | `0.5581 / 0.5797` <br> [**Google Drive**](https://drive.google.com/file/d/1y8cV_iOOVNIa66WaAxESqqaOLiCv-GAY/view?usp=sharing) | `0.7743 / 0.7925` <br> [**Google Drive**](https://drive.google.com/file/d/1qLiznF02he6VHEGUDkNr9p0M2-4xO3kr/view?usp=sharing) | `0.7729 / 0.7933` <br> [**Google Drive**](https://drive.google.com/file/d/1Q-zgOoUvXQb3cKtxgC8B9YtbH5YVtYyg/view?usp=sharing) | 综合得分 |
+| **EfficientNet-b1** | `0.5901 / 0.6130` <br> [**Google Drive**](https://drive.google.com/file/d/1ERKTGO18AD2G1J-fr8zjvzoQpSbx6lAo/view?usp=sharing) | `0.7766 / 0.7950` <br> [**Google Drive**](https://drive.google.com/file/d/1vTKaEI_AG7Vnhmrn2B9Rkfblay-GyKvu/view?usp=sharing) | `0.7808 / 0.7999` <br> [**Google Drive**](https://drive.google.com/file/d/1aqun7dmtALkYwvhOSWzlnJByDHTPMQVn/view?usp=sharing) | 综合得分 |
+| **EfficientNet-b5** | `0.6330 / 0.6440` <br> [**Google Drive**](https://drive.google.com/file/d/1utE5Rd8onzSlHeve0WYvgDwq4Kctl4zf/view?usp=sharing) | `0.7866 / 0.8041` <br> [**Google Drive**](https://drive.google.com/file/d/1Vx4KcZfisyrfoiZ5zHfBMJpugsFgB82p/view?usp=sharing) | `0.7899 / 0.8074` <br> [**Google Drive**](https://drive.google.com/file/d/1pi2-5Iat1qq0xP9H1vDdlcZBpN5-EUwB/view?usp=sharing) | 综合得分 |
+| **ViT-small**       | `0.5998 / 0.6161` <br> [**Google Drive**](https://drive.google.com/file/d/11YSVK8rrjMfw3N8XAK_CqzQiL30SuOYZ/view?usp=sharing) | `0.7992 / 0.8142` <br> [**Google Drive**](https://drive.google.com/file/d/1-KUxxK3j0JflRp2oTKROLEVCBl5q21eF/view?usp=sharing) | `0.7968 / 0.8139` <br> [**Google Drive**](https://drive.google.com/file/d/10HcI61FEISLbmXME4knZEMBzQmOR8MVs/view?usp=sharing) | 综合得分 |
+| **RA-MIQA**         | **`0.7003 / 0.6989`** <br> [**Google Drive**](https://drive.google.com/file/d/1n_NhJcnVpb8dC3B2UZ5ETl2-a96uK0Js/view?usp=sharing) | **`0.8125 / 0.8264`** <br> [**Google Drive**](https://drive.google.com/file/d/1zUcrPOvvYd4rquAm1Wilnh03d8Hj1EDe/view?usp=sharing) | **`0.8188 / 0.8340`** <br> [**Google Drive**](https://drive.google.com/file/d/1uvN9jEFuGK5PFQzjiuS9s7A0H9NXyOyc/view?usp=sharing) | 综合得分 |
+
+</details>
+
+<details>
+<summary> 准确度指标 </summary>
  
-| 方法 | 图像分类 (SRCC/PLCC) | 目标检测 (SRCC/PLCC) | 实例分割 (SRCC/PLCC) |下载 |
-|:----------------| :---: | :---: | :---: |:---: |
-| ResNet-18 | `0.5131 / 0.5427` | `0.7541 / 0.7734` | `0.7582 / 0.7790` |[**下载**](YOUR_MODEL_LINK) |
-| ResNet-50 | `0.5581 / 0.5797` | `0.7743 / 0.7925` | `0.7729 / 0.7933` |[**下载**](YOUR_MODEL_LINK) |
-| EfficientNet-b1 | `0.5901 / 0.6130` | `0.7766 / 0.7950` | `0.7808 / 0.7999` |[**下载**](YOUR_MODEL_LINK) |
-| EfficientNet-b5 | `0.6330 / 0.6440` | `0.7866 / 0.8041` | `0.7899 / 0.8074` |[**下载**](YOUR_MODEL_LINK) |
-| ViT-small | `0.5998 / 0.6161` | `0.7992 / 0.8142` | `0.7968 / 0.8139` |[**下载**](YOUR_MODEL_LINK) |
-| **RA-MIQA** | **`0.7003 / 0.6989`** | **`0.8125 / 0.8264`** | **`0.8188 / 0.8340`** |[**下载**](YOUR_MODEL_LINK) |
+| **方法**              | **图像分类** <br> (SRCC / PLCC 和下载链接) | **目标检测** <br> (SRCC / PLCC 和下载链接) | **实例分割** <br> (SRCC / PLCC 和下载链接) | **训练标签类型** |
+|:--------------------|:---:|:---:|:---:|:---:|
+| **ResNet-50**       | `0.4734 / 0.4411` <br> [**Google Drive**](https://drive.google.com/file/d/1mXzm-EuKhLY6zRW0jeVoBAi-kfGfGU0a/view?usp=sharing) | `0.6955 / 0.6898` <br> [**Google Drive**](https://drive.google.com/file/d/1e01vieTy4Fdgpqepoi1a1qpenpQLyfei/view?usp=sharing) | `0.6863 / 0.6847` <br> [**Google Drive**](https://drive.google.com/file/d/1qi9uCv_i3fAN6WVoYEHn6mI-BguFYEd-/view?usp=sharing) | 准确度得分 |
+| **EfficientNet-b5** | `0.5586 / 0.5149` <br> [**Google Drive**](https://drive.google.com/file/d/1qz7Qwrpa6PSwtSgPczADsYf5tVOdujw3/view?usp=sharing) | `0.7042 / 0.6991` <br> [**Google Drive**](https://drive.google.com/file/d/1rH36SwceDQ4zSr_exWCvpL_G2AOnCLT-/view?usp=sharing) | `0.6933 / 0.6949` <br> [**Google Drive**](https://drive.google.com/file/d/1DzgEkhFB182XshMBrh_MsWNHQWOYB3Ea/view?usp=sharing) | 准确度得分 |
+| **ViT-small**       | `0.5788 / 0.5197` <br> [**Google Drive**](https://drive.google.com/file/d/1fkROk-dQ63PdIeqiSIyrs7suDm_sJSFH/view?usp=sharing) | `0.7121 / 0.7052` <br> [**Google Drive**](https://drive.google.com/file/d/1K_b29iBLIx1AHCCNaNJUHYx_LT-1Rcwh/view?usp=sharing) | `0.7168 / 0.7146` <br> [**Google Drive**](https://drive.google.com/file/d/1Ft90uII_kfMLIHsIFJ4X8D4kI_jaxWC3/view?usp=sharing) | 准确度得分 |
+| **RA-MIQA**         | **`0.6573 / 0.5823`** <br> [**Google Drive**](https://drive.google.com/file/d/1zVhc8Jl1TJYC7Th_4WvwpFiTwac6D6X0/view?usp=sharing) | **`0.7448 / 0.7370`** <br> [**Google Drive**](https://drive.google.com/file/d/1gGAM7Wr-65CtN4gUdoLU0ZvN-fdFbosD/view?usp=sharing) | **`0.7363 / 0.7327`** <br> [**Google Drive**](https://drive.google.com/file/d/1eR3ba5E-rbv6d08VBOXJ_EAUCDkVNGa9/view?usp=sharing) | 准确度得分 |
 
-模型会在首次使用时自动下载：
+</details>
 
-```python
-from machine_iqa import MIQAModel
+ 
+<details>
+<summary> 一致性指标 </summary>
 
-# 通过指定方法名称来初始化 MIQA 模型
-model = MIQAModel('ra-miqa')  # 模型将被自动下载
-```
+| **方法**              | **图像分类** <br> (SRCC / PLCC 和下载链接) | **目标检测** <br> (SRCC / PLCC 和下载链接) | **实例分割** <br> (SRCC / PLCC 和下载链接) | **训练标签类型** |
+|:--------------------|:---:|:---:|:---:|:---:|
+| **ResNet-50**       | `0.5989 / 0.6551` <br> [**Google Drive**](https://drive.google.com/file/d/1VUPGUNatYPTvF_q9iNJ0WUAMLmeCNdPi/view?usp=sharing) | `0.8252 / 0.5457` <br> [**Google Drive**](https://drive.google.com/file/d/1HV_YiDcMGd2GNQDZiJBjq9oJQ4mmkWXs/view?usp=sharing) | `0.8320 / 0.8480` <br> [**Google Drive**](https://drive.google.com/file/d/1IYpjSy2Mbr0EMw8kagPrMy3ZFd7ggNUw/view?usp=sharing) | 一致性得分 |
+| **EfficientNet-b5** | `0.6774 / 0.7168` <br> [**Google Drive**](https://drive.google.com/file/d/1gao45m88gRzlY6jbcB3C0B3Y25eJpjvW/view?usp=sharing) | `0.8353 / 0.8530` <br> [**Google Drive**](https://drive.google.com/file/d/1stlveb-l4YfDW7Jd5HxqAvtkKoSpBVlO/view?usp=sharing) | `0.8419 / 0.8564` <br> [**Google Drive**](https://drive.google.com/file/d/1mbbalTCfZGvxR9zD03BhZCoOCfKOHYhp/view?usp=sharing) | 一致性得分 |
+| **ViT-small**       | `0.6798 / 0.7189` <br> [**Google Drive**](https://drive.google.com/file/d/1ZoRfSGJzu4NrIg7LZ03cLZ5Pwml1Di4o/view?usp=sharing) | `0.8459 / 0.8620` <br> [**Google Drive**](https://drive.google.com/file/d/1yx7hMh3Bt0qEE_9oNcP5LO_SeBre7sde/view?usp=sharing) | `0.8487 / 0.8616` <br> [**Google Drive**](https://drive.google.com/file/d/10VmxqqvpWnd7uxE7mx8WcRqJQNM8dbFo/view?usp=sharing) | 一致性得分 |
+| **RA-MIQA**         | **`0.7707 / 0.7866`** <br> [**Google Drive**](https://drive.google.com/file/d/1bJrNFAz4hWAP9wO680Kq36EhQ0oCl1sj/view?usp=sharing) | **`0.8526 / 0.8692`** <br> [**Google Drive**](https://drive.google.com/file/d/1TvyiN-DPtol0B7k2mo9bPXUoMjJ8F0Xn/view?usp=sharing) | **`0.8632 / 0.8756`** <br> [**Google Drive**](https://drive.google.com/file/d/1E9H7zerQgf2CUtLhttQBk70AsGb04hih/view?usp=sharing) | 一致性得分 |
 
-## 🚀 快速上手
+</details>
+
+
+## 🚀 快速开始
 
 ### 评估单张图像
 
-```python
-from machine_iqa import MIQAModel
-import cv2
+使用命令行界面对单张图像进行 MIQA 推理：
 
-# 加载模型
-model = MIQAModel('ra-miqa')
+```
+# 评估一张用于“面向分类的MIQA”的图像
 
-# 读取并评估图像
-image = cv2.imread('path/to/image.jpg')
-quality_score = model.assess(image)
-print(f"图像质量得分: {quality_score:.3f}")
+python img_inference.py --input path/to/image.jpg --task cls --model ra_miqa
 ```
 
-<details>
-<summary>📸 示例结果</summary>
+### 评估图像目录
 
-| 图像 | 质量分数 | 预测结果 |
-|-------|---------------|------------|
-| ![Demo 1](assets/demo1.jpg) | 0.892 | 高质量 |
-| ![Demo 2](assets/demo2.jpg) | 0.634 | 中等质量 |
-| ![Demo 3](assets/demo3.jpg) | 0.298 | 低质量 |
+处理一个目录中的所有图像：
+
+```
+# 评估一个目录中的所有图像（例如，用于“面向检测的MIQA”）
+
+python img_inference.py --input ./assets/demo_images/coco_demo --task det --model ra_miqa
+```
+
+### 保存结果与可视化
+保存输出并生成可视化结果：
+```
+# 为单张图像保存预测分数和可视化结果
+python img_inference.py --input path/to/image.jpg --task cls --model ra_miqa --save-results --visualize
+
+# 为一个目录保存批量结果并生成可视化
+python img_inference.py --input ./assets/demo_images/imagenet_demo --task ins --save-results --visualize
+```
+<details> <summary>📸 <b>MIQA 预测结果示例</b></summary> <p align="center"> 
+<img src="inference_results/image/cls/composite/miqa_ra_miqa_ILSVRC2012_val_00024142_motion_blur_1.png" width="18%"> 
+<img src="inference_results/image/cls/composite/miqa_ra_miqa_ILSVRC2012_val_00024142_motion_blur_2.png" width="18%"> 
+<img src="inference_results/image/cls/composite/miqa_ra_miqa_ILSVRC2012_val_00024142_motion_blur_3.png" width="18%"> 
+<img src="inference_results/image/cls/composite/miqa_ra_miqa_ILSVRC2012_val_00024142_motion_blur_4.png" width="18%"> 
+<img src="inference_results/image/cls/composite/miqa_ra_miqa_ILSVRC2012_val_00024142_motion_blur_5.png" width="18%"> 
+</p> <p align="center"><em> 预训练模型: <b>RA-MIQA</b> | 训练标签: <b>综合得分</b> | 失真类型: <b>运动模糊</b> | 任务: <b>面向分类的MIQA</b> </em></p>
+<p align="center"> <img src="inference_results/image/det/composite/miqa_ra_miqa_000000258883_jpeg_compression_1.png" width="18%"> 
+<img src="inference_results/image/det/composite/miqa_ra_miqa_000000258883_jpeg_compression_2.png" width="18%"> 
+<img src="inference_results/image/det/composite/miqa_ra_miqa_000000258883_jpeg_compression_3.png" width="18%"> 
+<img src="inference_results/image/det/composite/miqa_ra_miqa_000000258883_jpeg_compression_4.png" width="18%"> 
+<img src="inference_results/image/det/composite/miqa_ra_miqa_000000258883_jpeg_compression_5.png" width="18%"> 
+</p> <p align="center"><em> 预训练模型: <b>RA-MIQA</b> | 训练标签: <b>综合得分</b> | 失真类型: <b>JPEG 压缩</b> | 任务: <b>面向检测的MIQA</b> </em></p> 
+</details>
+
+### 🎬 视频评估
+
+视频质量评估提供两种工作流： **(1) 逐帧标注**: 生成带有完整标注的视频，用于详细的视觉检查。这种方法适合演示和定性分析，但计算量较大。
+**(2) 选择性采样与聚合**: 通过采样帧来生成图表和结构化数据（.json），用于高效的定量分析。这种方法是批量处理和生成报告的理想选择。
+#### 分析单个视频 (**逐帧标注**)
+
+对一个视频进行 MIQA 推理，并保存带标注的输出。
+```bash
+# 使用 RA-MIQA 评估单个视频（面向分类的MIQA）
+python video_annotator_inference.py --input assets/demo_video/brightness_distorted.mp4 --task cls --model ra_miqa
+```
+
+#### 评估视频目录 (**逐帧标注**)
+处理指定文件夹中的所有视频：
+
+```bash
+# 评估一个目录中的所有视频，用于面向目标检测的MIQA
+python video_annotator_inference.py --input assets/demo_video/ --task det --model ra_miqa
+```
+
+主要输出是一个新的 `.mp4` 视频文件。该视频会同时播放原始画面和一个动态侧边栏，侧边栏会实时显示质量分数，并随着视频播放绘制一条折线图。
+
+<details open>
+
+<summary>🎥 <b>示例: 视频的逐帧MIQA预测</b></summary> 
+
+| 亮度变化 | 压缩伪影 | 无明显感知失真 |
+| :---: | :---: | :---: |
+| <video src="https://github.com/user-attachments/assets/9b20cbc4-3baf-4d57-8d5f-49acd6873725" width="280" controls></video> | <video src="https://github.com/user-attachments/assets/c2fc142b-6889-4451-8a05-fb93e0ec0656" width="280" controls></video> | <video src="https://github.com/user-attachments/assets/14f4fc37-5ae5-4068-81f2-6f86bec30a27" width="280" controls></video> | 
 
 </details>
 
-### 批量处理图像
+#### 分析单个视频 (**选择性采样与聚合**)
 
-```python
-from machine_iqa import batch_assess
-import glob
+为了进行高效的定量分析，此脚本会对视频进行帧采样，而不是处理所有帧。它速度快得多，专为生成分析报告而设计。
 
-# 处理整个目录的图像
-image_paths = glob.glob('dataset/*.jpg')
-scores = batch_assess(image_paths, model_name='ra-miqa')
-
-for path, score in zip(image_paths, scores):
-    print(f"{path}: {score:.3f}")
+```bash
+# 分析一个视频，采样帧，并创建一个双粒度图表
+python video_analytics_inference.py --input assets/demo_video/gaussian_distorted.mp4 --task ins --visualize --viz-granularity both```
 ```
 
-### 评估视频质量
+#### 评估视频目录 (**选择性采样与聚合**)
 
-```python
-from machine_iqa import VideoMIQA
+此工作流为批量处理进行了高度优化。
 
-# 初始化视频评估器
-video_iqa = VideoMIQA('ra-miqa')
+```bash
+# 分析目录中的所有视频，每个视频采样120帧
+python video_analytics_inference.py --input assets/demo_video/ --task det --video-frames 120 --visualize
 
-# 处理视频文件
-results = video_iqa.assess_video('path/to/video.mp4')
-print(f"视频帧的质量分布: {results['mean_score']:.3f}")
+
+python video_analytics_inference.py --input assets/demo_video/jpeg_distorted.mp4  --task det --visualize --viz-granularity both
+# viz-granularity both : 指定要生成的图表类型。'composite' 会创建一个全面的并排比较图表，显示：
+# 1. 原始的、逐帧的质量分数。 2. 平滑处理后的、每秒平均的质量分数。
 ```
+
+这个过程**不会创建新的视频**，它会为每个分析的视频生成两个关键输出：
+1.  一个 **`.png` 图像**: 一个详细的时间序列图，显示视频播放期间质量分数的波动。
+2.  一个 **`.json` 文件**: 一个结构化数据文件，包含每秒的聚合分数、总体统计数据（平均值、最小值、最大值、标准差）和视频元数据。
 
 <details>
-<summary>🎥 视频评估示例</summary>
+<summary>📊 <b>示例: 视频的聚合MIQA分析</b></summary>
 
-视频处理结果示例：
-- **逐帧分析**: 获取每一帧的质量分数
-- **时序一致性**: 观察质量随时间的变化
-- **关键洞察**: 识别视频中质量下降的关键节点
-
+|                                           亮度变化视频预测结果                                            | 压缩伪影视频预测结果 |                                     无明显感知失真视频预测结果                                     |
+|:-----------------------------------------------------------------------------------------------:| :---: |:-------------------------------------------------------------------------------:|
+| <img src="inference_results/brightness_distorted_composite_quality_comparison.png" width="280"> | <img src="inference_results/jpeg_distorted_composite_quality_comparison.png" width="280"> | <img src="inference_results/B314_composite_quality_comparison.png" width="280"> |
+ 
 </details>
-
-### 实时摄像头评估
-
-```python
-from machine_iqa import RealTimeIQA
-import cv2
-
-# 初始化实时评估器 (建议使用轻量级模型以保证速度)
-rt_iqa = RealTimeIQA('ra-miqa')  
-
-# 启动摄像头
-cap = cv2.VideoCapture(0)
-
-while True:
-    ret, frame = cap.read()
-    if not ret:
-        break
-    
-    # 评估当前帧的质量
-    score = rt_iqa.assess_frame(frame)
-    
-    # 在画面上显示结果
-    cv2.putText(frame, f'Quality: {score:.3f}', (10, 30), 
-                cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-    cv2.imshow('Real-time IQA', frame)
-    
-    # 按 'q' 键退出
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-
-cap.release()
-cv2.destroyAllWindows()
-```
 
 ## 🏃 训练与评估
 
 ### 模型训练
 
 ```bash
-# 基础训练
-python train.py --config configs/iqa_base.yaml --data_path /path/to/dataset
-
-# 使用自定义参数进行高级训练
-python train.py \
-    --config configs/iqa_large.yaml \
-    --data_path /path/to/dataset \
-    --batch_size 32 \
-    --learning_rate 1e-4 \
-    --epochs 100 \
-    --gpu_ids 0,1
+CUDA_VISIBLE_DEVICES=0,1 python train.py \
+      --dataset 'miqa_cls' \
+      --path_miqa_cls 'path/to/datasets_miqa_cls' \
+      --train_split_file '../data/dataset_splitting/miqa_cls_train.csv' \
+      --val_split_file '../data/dataset_splitting//miqa_cls_val.csv' \
+      --metric_type 'composite' --loss_name 'mse' --is_two_transform \
+      -a 'RA-MIQA' --pretrained --transform_type 'simple_transform' \
+      -b 256 --epochs 5 --warmup_epochs 1 --validate_num 2 --lr 1e-4 \
+      --image_size 288 --crop_size 224 --workers 8 -p 100 \
+      --multiprocessing-distributed --world-size 1 --rank 0
 ```
+更多训练脚本请见 "**scripts**" 文件夹。
 
 ### 在标准基准上进行评估
+ 
 
 ```bash
 # 在测试集上评估
-python evaluate.py --model_path checkpoints/best_model.pth --test_data /path/to/test
+python evaluate.py --model_name ra_miqa  --train_dataset cls  --test_dataset cls  --metric_type composite
 
-# 跨数据集评估
-python evaluate.py --model_path checkpoints/best_model.pth --datasets miqa_cls
+# 跨数据集评估：评估在miqa_cls数据集上训练并在miqa_det数据集上测试
+python evaluate.py --model_name ra_miqa  --train_dataset cls  --test_dataset det  --metric_type composite
 ```
 
 ## 📈 基准测试
 
 <details>
-<summary>表 1: 基于综合性能的基准测试</summary>
+<summary>表 1: 基于综合质量标签的基准测试</summary>
 
 <table>
 <thead>
@@ -816,4 +854,4 @@ python evaluate.py --model_path checkpoints/best_model.pth --datasets miqa_cls
 ---
 **⭐ 如果这个项目对您有帮助，请点亮 Star！😊**
 
-*最后更新于: [09/26/2025]*
+*最后更新于: [10/25/2025]*

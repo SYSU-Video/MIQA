@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "task": "cls",
+    "model": "ra_miqa",
+    "metric_type": "composite",
+    "timestamp": "2025-10-25T11:46:03.707510",
+    "num_images": 10
+  },
+  "predictions": [
+    {
+      "image_path": "E:\\github\\MIQA\\assets\\demo_images\\imagenet_demo\\ILSVRC2012_val_00017140_defocus_blur_1.png",
+      "image_name": "ILSVRC2012_val_00017140_defocus_blur_1.png",
+      "quality_score": 0.9825496673583984
+    },
+    {
+      "image_path": "E:\\github\\MIQA\\assets\\demo_images\\imagenet_demo\\ILSVRC2012_val_00017140_defocus_blur_2.png",
+      "image_name": "ILSVRC2012_val_00017140_defocus_blur_2.png",
+      "quality_score": 0.9783772230148315
+    },
+    {
+      "image_path": "E:\\github\\MIQA\\assets\\demo_images\\imagenet_demo\\ILSVRC2012_val_00017140_defocus_blur_3.png",
+      "image_name": "ILSVRC2012_val_00017140_defocus_blur_3.png",
+      "quality_score": 0.991335391998291
+    },
+    {
+      "image_path": "E:\\github\\MIQA\\assets\\demo_images\\imagenet_demo\\ILSVRC2012_val_00017140_defocus_blur_4.png",
+      "image_name": "ILSVRC2012_val_00017140_defocus_blur_4.png",
+      "quality_score": 0.9839775562286377
+    },
+    {
+      "image_path": "E:\\github\\MIQA\\assets\\demo_images\\imagenet_demo\\ILSVRC2012_val_00017140_defocus_blur_5.png",
+      "image_name": "ILSVRC2012_val_00017140_defocus_blur_5.png",
+      "quality_score": 0.8754595518112183
+    },
+    {
+      "image_path": "E:\\github\\MIQA\\assets\\demo_images\\imagenet_demo\\ILSVRC2012_val_00024142_motion_blur_1.png",
+      "image_name": "ILSVRC2012_val_00024142_motion_blur_1.png",
+      "quality_score": 0.9615893959999084
+    },
+    {
+      "image_path": "E:\\github\\MIQA\\assets\\demo_images\\imagenet_demo\\ILSVRC2012_val_00024142_motion_blur_2.png",
+      "image_name": "ILSVRC2012_val_00024142_motion_blur_2.png",
+      "quality_score": 0.9667682647705078
+    },
+    {
+      "image_path": "E:\\github\\MIQA\\assets\\demo_images\\imagenet_demo\\ILSVRC2012_val_00024142_motion_blur_3.png",
+      "image_name": "ILSVRC2012_val_00024142_motion_blur_3.png",
+      "quality_score": 0.8643946647644043
+    },
+    {
+      "image_path": "E:\\github\\MIQA\\assets\\demo_images\\imagenet_demo\\ILSVRC2012_val_00024142_motion_blur_4.png",
+      "image_name": "ILSVRC2012_val_00024142_motion_blur_4.png",
+      "quality_score": 0.5894055962562561
+    },
+    {
+      "image_path": "E:\\github\\MIQA\\assets\\demo_images\\imagenet_demo\\ILSVRC2012_val_00024142_motion_blur_5.png",
+      "image_name": "ILSVRC2012_val_00024142_motion_blur_5.png",
+      "quality_score": 0.3561462461948395
+    }
+  ]
+}

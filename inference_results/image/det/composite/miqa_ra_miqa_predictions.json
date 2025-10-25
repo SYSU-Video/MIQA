@@ -1,0 +1,61 @@
+{
+  "metadata": {
+    "task": "det",
+    "model": "ra_miqa",
+    "metric_type": "composite",
+    "timestamp": "2025-10-25T11:46:38.590023",
+    "num_images": 10
+  },
+  "predictions": [
+    {
+      "image_path": "E:\\github\\MIQA\\assets\\demo_images\\coco_demo\\000000210520_darkness_1.png",
+      "image_name": "000000210520_darkness_1.png",
+      "quality_score": 0.6418792605400085
+    },
+    {
+      "image_path": "E:\\github\\MIQA\\assets\\demo_images\\coco_demo\\000000210520_darkness_2.png",
+      "image_name": "000000210520_darkness_2.png",
+      "quality_score": 0.6334958076477051
+    },
+    {
+      "image_path": "E:\\github\\MIQA\\assets\\demo_images\\coco_demo\\000000210520_darkness_3.png",
+      "image_name": "000000210520_darkness_3.png",
+      "quality_score": 0.5836566090583801
+    },
+    {
+      "image_path": "E:\\github\\MIQA\\assets\\demo_images\\coco_demo\\000000210520_darkness_4.png",
+      "image_name": "000000210520_darkness_4.png",
+      "quality_score": 0.42866188287734985
+    },
+    {
+      "image_path": "E:\\github\\MIQA\\assets\\demo_images\\coco_demo\\000000210520_darkness_5.png",
+      "image_name": "000000210520_darkness_5.png",
+      "quality_score": 0.11961251497268677
+    },
+    {
+      "image_path": "E:\\github\\MIQA\\assets\\demo_images\\coco_demo\\000000258883_jpeg_compression_1.png",
+      "image_name": "000000258883_jpeg_compression_1.png",
+      "quality_score": 0.7495586276054382
+    },
+    {
+      "image_path": "E:\\github\\MIQA\\assets\\demo_images\\coco_demo\\000000258883_jpeg_compression_2.png",
+      "image_name": "000000258883_jpeg_compression_2.png",
+      "quality_score": 0.6567768454551697
+    },
+    {
+      "image_path": "E:\\github\\MIQA\\assets\\demo_images\\coco_demo\\000000258883_jpeg_compression_3.png",
+      "image_name": "000000258883_jpeg_compression_3.png",
+      "quality_score": 0.5966635942459106
+    },
+    {
+      "image_path": "E:\\github\\MIQA\\assets\\demo_images\\coco_demo\\000000258883_jpeg_compression_4.png",
+      "image_name": "000000258883_jpeg_compression_4.png",
+      "quality_score": 0.36758458614349365
+    },
+    {
+      "image_path": "E:\\github\\MIQA\\assets\\demo_images\\coco_demo\\000000258883_jpeg_compression_5.png",
+      "image_name": "000000258883_jpeg_compression_5.png",
+      "quality_score": 0.029080087319016457
+    }
+  ]
+}

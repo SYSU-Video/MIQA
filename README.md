@@ -38,7 +38,7 @@
 - [🤝 Contributing](#-contributing)
 - [📧 Contact](#-contact)
 -->
-
+<!--
 ## 🔥 **Latest Updates**
 > To do list:
 > 
@@ -47,7 +47,7 @@
 > **[2025-XX-XX]** 📖 [Interactive Colab tutorial now available](colab-link)
 >
 > **[2025-XX-XX]** 🤗 [Models uploaded to HuggingFace Hub](huggingface-link)
-
+-->
 
 ## 🔬 Research Background
 - **Background**: Machine vision systems excel in controlled environments but suffer severe performance degradation from image distortions in real-world deployment. Traditional image quality assessment prioritizes human perceptual fidelity, creating a fundamental mismatch with machine sensitivities.
@@ -109,154 +109,194 @@ pip install -r requirements.txt
 ```
 
 ## 📦 Model Weights & Performance
+<details open>
+<summary> Composite Metric </summary>
+
+| **Method**          |                                      **Image Classification** <br> (SRCC / PLCC & Download)                                       |                                        **Object Detection** <br> (SRCC / PLCC & Download)                                         |                                      **Instance Segmentation** <br> (SRCC / PLCC & Download)                                      | **Training Label Type** |
+| :------------------ |:---------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------:|:---------------------:|
+| **ResNet-18**       |   `0.5131 / 0.5427` <br> [**Google Drive**](https://drive.google.com/file/d/1zq03_TRYbg1zYEilP66x6HXpUUQ2sV_H/view?usp=sharing)   |   `0.7541 / 0.7734` <br> [**Google Drive**](https://drive.google.com/file/d/1_5mP7nOc2kla6l4QaTBBs5Xlj4hSu9dE/view?usp=sharing)   |   `0.7582 / 0.7790` <br> [**Google Drive**](https://drive.google.com/file/d/1umqAI4MiqfPK7dPiro6im_vDA_zrNfRO/view?usp=sharing)   |     Composite Score   |
+| **ResNet-50**       |   `0.5581 / 0.5797` <br> [**Google Drive**](https://drive.google.com/file/d/1y8cV_iOOVNIa66WaAxESqqaOLiCv-GAY/view?usp=sharing)   |   `0.7743 / 0.7925` <br> [**Google Drive**](https://drive.google.com/file/d/1qLiznF02he6VHEGUDkNr9p0M2-4xO3kr/view?usp=sharing)   |   `0.7729 / 0.7933` <br> [**Google Drive**](https://drive.google.com/file/d/1Q-zgOoUvXQb3cKtxgC8B9YtbH5YVtYyg/view?usp=sharing)   |     Composite Score   |
+| **EfficientNet-b1** |   `0.5901 / 0.6130` <br> [**Google Drive**](https://drive.google.com/file/d/1ERKTGO18AD2G1J-fr8zjvzoQpSbx6lAo/view?usp=sharing)   |   `0.7766 / 0.7950` <br> [**Google Drive**](https://drive.google.com/file/d/1vTKaEI_AG7Vnhmrn2B9Rkfblay-GyKvu/view?usp=sharing)   |   `0.7808 / 0.7999` <br> [**Google Drive**](https://drive.google.com/file/d/1aqun7dmtALkYwvhOSWzlnJByDHTPMQVn/view?usp=sharing)   |     Composite Score   |
+| **EfficientNet-b5** |   `0.6330 / 0.6440` <br> [**Google Drive**](https://drive.google.com/file/d/1utE5Rd8onzSlHeve0WYvgDwq4Kctl4zf/view?usp=sharing)   |   `0.7866 / 0.8041` <br> [**Google Drive**](https://drive.google.com/file/d/1Vx4KcZfisyrfoiZ5zHfBMJpugsFgB82p/view?usp=sharing)   |   `0.7899 / 0.8074` <br> [**Google Drive**](https://drive.google.com/file/d/1pi2-5Iat1qq0xP9H1vDdlcZBpN5-EUwB/view?usp=sharing)   |     Composite Score   |
+| **ViT-small**       |   `0.5998 / 0.6161` <br> [**Google Drive**](https://drive.google.com/file/d/11YSVK8rrjMfw3N8XAK_CqzQiL30SuOYZ/view?usp=sharing)   |   `0.7992 / 0.8142` <br> [**Google Drive**](https://drive.google.com/file/d/1-KUxxK3j0JflRp2oTKROLEVCBl5q21eF/view?usp=sharing)   |   `0.7968 / 0.8139` <br> [**Google Drive**](https://drive.google.com/file/d/10HcI61FEISLbmXME4knZEMBzQmOR8MVs/view?usp=sharing)   |   Composite Score     |
+| **RA-MIQA (Ours)**  | **`0.7003 / 0.6989`** <br> [**Google Drive**](https://drive.google.com/file/d/1n_NhJcnVpb8dC3B2UZ5ETl2-a96uK0Js/view?usp=sharing) | **`0.8125 / 0.8264`** <br> [**Google Drive**](https://drive.google.com/file/d/1zUcrPOvvYd4rquAm1Wilnh03d8Hj1EDe/view?usp=sharing) | **`0.8188 / 0.8340`** <br> [**Google Drive**](https://drive.google.com/file/d/1uvN9jEFuGK5PFQzjiuS9s7A0H9NXyOyc/view?usp=sharing) |     Composite Score   |
+
+</details>
+
+<details>
+<summary> Accuracy Metric</summary>
  
-| Method          | Image Classification (SRCC/PLCC) | Object Detection (SRCC/PLCC) | Instance Segmentation (SRCC/PLCC) |Download |
-|:----------------| :---: | :---: | :---: |:---: |
-| ResNet-18       | `0.5131 / 0.5427` | `0.7541 / 0.7734` | `0.7582 / 0.7790` |[**Download**](YOUR_MODEL_LINK) |
-| ResNet-50       | `0.5581 / 0.5797` | `0.7743 / 0.7925` | `0.7729 / 0.7933` |[**Download**](YOUR_MODEL_LINK) |
-| EfficientNet-b1 | `0.5901 / 0.6130` | `0.7766 / 0.7950` | `0.7808 / 0.7999` |[**Download**](YOUR_MODEL_LINK) |
-| EfficientNet-b5 | `0.6330 / 0.6440` | `0.7866 / 0.8041` | `0.7899 / 0.8074` |[**Download**](YOUR_MODEL_LINK) |
-| ViT-small       | `0.5998 / 0.6161` | `0.7992 / 0.8142` | `0.7968 / 0.8139` |[**Download**](YOUR_MODEL_LINK) |
-| **RA-MIQA**     | **`0.7003 / 0.6989`** | **`0.8125 / 0.8264`** | **`0.8188 / 0.8340`** |[**Download**](YOUR_MODEL_LINK) |
+| **Method**          |                                      **Image Classification** <br> (SRCC / PLCC & Download)                                       |                                        **Object Detection** <br> (SRCC / PLCC & Download)                                         |                                      **Instance Segmentation** <br> (SRCC / PLCC & Download)                                      | **Training Label Type** |
+| :------------------ |:---------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------:|:-----------------------:|
+| **ResNet-50**       |   `0.4734 / 0.4411` <br> [**Google Drive**](https://drive.google.com/file/d/1mXzm-EuKhLY6zRW0jeVoBAi-kfGfGU0a/view?usp=sharing)   |   `0.6955 / 0.6898` <br> [**Google Drive**](https://drive.google.com/file/d/1e01vieTy4Fdgpqepoi1a1qpenpQLyfei/view?usp=sharing)   |   `0.6863 / 0.6847` <br> [**Google Drive**](https://drive.google.com/file/d/1qi9uCv_i3fAN6WVoYEHn6mI-BguFYEd-/view?usp=sharing)   |     Accuracy Score      |
+| **EfficientNet-b5** |   `0.5586 / 0.5149` <br> [**Google Drive**](https://drive.google.com/file/d/1qz7Qwrpa6PSwtSgPczADsYf5tVOdujw3/view?usp=sharing)   |   `0.7042 / 0.6991` <br> [**Google Drive**](https://drive.google.com/file/d/1rH36SwceDQ4zSr_exWCvpL_G2AOnCLT-/view?usp=sharing)   |   `0.6933 / 0.6949` <br> [**Google Drive**](https://drive.google.com/file/d/1DzgEkhFB182XshMBrh_MsWNHQWOYB3Ea/view?usp=sharing)   |     Accuracy Score     |
+| **ViT-small**       |   `0.5788 / 0.5197` <br> [**Google Drive**](https://drive.google.com/file/d/1fkROk-dQ63PdIeqiSIyrs7suDm_sJSFH/view?usp=sharing)   |   `0.7121 / 0.7052` <br> [**Google Drive**](https://drive.google.com/file/d/1K_b29iBLIx1AHCCNaNJUHYx_LT-1Rcwh/view?usp=sharing)   |   `0.7168 / 0.7146` <br> [**Google Drive**](https://drive.google.com/file/d/1Ft90uII_kfMLIHsIFJ4X8D4kI_jaxWC3/view?usp=sharing)   |     Accuracy Score     |
+| **RA-MIQA (Ours)**  | **`0.6573 / 0.5823`** <br> [**Google Drive**](https://drive.google.com/file/d/1zVhc8Jl1TJYC7Th_4WvwpFiTwac6D6X0/view?usp=sharing) | **`0.7448 / 0.7370`** <br> [**Google Drive**](https://drive.google.com/file/d/1gGAM7Wr-65CtN4gUdoLU0ZvN-fdFbosD/view?usp=sharing) | **`0.7363 / 0.7327`** <br> [**Google Drive**](https://drive.google.com/file/d/1eR3ba5E-rbv6d08VBOXJ_EAUCDkVNGa9/view?usp=sharing) |     Accuracy Score     |
 
-Models will be automatically downloaded on first use:
+</details>
 
-```python
-from machine_iqa import MIQAModel
+ 
+<details>
+<summary> Consistency Metric </summary>
 
-# Initialize the MIQA model by specifying the desired method
-model = MIQAModel('ra-miqa')  # The model will be downloaded automatically
-```
+| **Method**          |                                      **Image Classification** <br> (SRCC / PLCC & Download)                                       |                                        **Object Detection** <br> (SRCC / PLCC & Download)                                         |                                      **Instance Segmentation** <br> (SRCC / PLCC & Download)                                      |  **Training Label Type**  |
+| :------------------ |:---------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------:|:-------------------------:|
+| **ResNet-50**       |   `0.5989 / 0.6551` <br> [**Google Drive**](https://drive.google.com/file/d/1VUPGUNatYPTvF_q9iNJ0WUAMLmeCNdPi/view?usp=sharing)   |   `0.8252 / 0.5457` <br> [**Google Drive**](https://drive.google.com/file/d/1HV_YiDcMGd2GNQDZiJBjq9oJQ4mmkWXs/view?usp=sharing)   |   `0.8320 / 0.8480` <br> [**Google Drive**](https://drive.google.com/file/d/1IYpjSy2Mbr0EMw8kagPrMy3ZFd7ggNUw/view?usp=sharing)   |     Consistency Score     |
+| **EfficientNet-b5** |   `0.6774 / 0.7168` <br> [**Google Drive**](https://drive.google.com/file/d/1gao45m88gRzlY6jbcB3C0B3Y25eJpjvW/view?usp=sharing)   |   `0.8353 / 0.8530` <br> [**Google Drive**](https://drive.google.com/file/d/1stlveb-l4YfDW7Jd5HxqAvtkKoSpBVlO/view?usp=sharing)   |   `0.8419 / 0.8564` <br> [**Google Drive**](https://drive.google.com/file/d/1mbbalTCfZGvxR9zD03BhZCoOCfKOHYhp/view?usp=sharing)   |     Consistency Score     |
+| **ViT-small**       |   `0.6798 / 0.7189` <br> [**Google Drive**](https://drive.google.com/file/d/1ZoRfSGJzu4NrIg7LZ03cLZ5Pwml1Di4o/view?usp=sharing)   |   `0.8459 / 0.8620` <br> [**Google Drive**](https://drive.google.com/file/d/1yx7hMh3Bt0qEE_9oNcP5LO_SeBre7sde/view?usp=sharing)   |   `0.8487 / 0.8616` <br> [**Google Drive**](https://drive.google.com/file/d/10VmxqqvpWnd7uxE7mx8WcRqJQNM8dbFo/view?usp=sharing)   |     Consistency Score     |
+| **RA-MIQA (Ours)**  | **`0.7707 / 0.7866`** <br> [**Google Drive**](https://drive.google.com/file/d/1bJrNFAz4hWAP9wO680Kq36EhQ0oCl1sj/view?usp=sharing) | **`0.8526 / 0.8692`** <br> [**Google Drive**](https://drive.google.com/file/d/1TvyiN-DPtol0B7k2mo9bPXUoMjJ8F0Xn/view?usp=sharing) | **`0.8632 / 0.8756`** <br> [**Google Drive**](https://drive.google.com/file/d/1E9H7zerQgf2CUtLhttQBk70AsGb04hih/view?usp=sharing) |     Consistency Score     |
+
+</details>
+
 
 ## 🚀 Quick Start
 
-### Single Image Assessment
+### Assess a Single Image
 
-```python
-from machine_iqa import MIQAModel
-import cv2
+Run MIQA inference for a single image using command-line interface:
 
-# Load model
-model = MIQAModel('ra-miqa')
+```
+# Evaluate a single image for classification-oriented MIQA
 
-# Load and assess image
-image = cv2.imread('path/to/image.jpg')
-quality_score = model.assess(image)
-print(f"Quality Score: {quality_score:.3f}")
+python img_inference.py --input path/to/image.jpg --task cls --model ra_miqa
 ```
 
-<details>
-<summary>📸 Demo Results</summary>
+### Evaluate a Directory of Images
 
-| Image | Quality Score | Prediction |
-|-------|---------------|------------|
-| ![Demo 1](assets/demo1.jpg) | 0.892 | High Quality |
-| ![Demo 2](assets/demo2.jpg) | 0.634 | Medium Quality |
-| ![Demo 3](assets/demo3.jpg) | 0.298 | Low Quality |
+Process all images within a directory
+
+```
+# Assess all images in a directory (e.g., detection-oriented MIQA)
+
+python img_inference.py --input ./assets/demo_images/coco_demo --task det --model ra_miqa
+```
+
+### Save Results and Visualizations
+To save outputs and generate visualized results:
+```
+# Save the predicted scores and visualization for a single image
+python img_inference.py --input path/to/image.jpg --task cls --model ra_miqa --save-results --visualize
+
+# Save batch results and generate visualization for a directory
+python img_inference.py --input ./assets/demo_images/imagenet_demo --task ins --save-results --visualize
+```
+<details> <summary>📸 <b>Results of MIQA Prediction</b></summary> <p align="center"> 
+<img src="inference_results/image/cls/composite/miqa_ra_miqa_ILSVRC2012_val_00024142_motion_blur_1.png" width="18%"> 
+<img src="inference_results/image/cls/composite/miqa_ra_miqa_ILSVRC2012_val_00024142_motion_blur_2.png" width="18%"> 
+<img src="inference_results/image/cls/composite/miqa_ra_miqa_ILSVRC2012_val_00024142_motion_blur_3.png" width="18%"> 
+<img src="inference_results/image/cls/composite/miqa_ra_miqa_ILSVRC2012_val_00024142_motion_blur_4.png" width="18%"> 
+<img src="inference_results/image/cls/composite/miqa_ra_miqa_ILSVRC2012_val_00024142_motion_blur_5.png" width="18%"> 
+</p> <p align="center"><em> Pretrained model: <b>RA-MIQA</b> | Trained label: <b>Composite Score</b> | Distortion type: <b>Motion Blur</b> | Task: <b>Classification-oriented MIQA</b> </em></p>
+<p align="center"> <img src="inference_results/image/det/composite/miqa_ra_miqa_000000258883_jpeg_compression_1.png" width="18%"> 
+<img src="inference_results/image/det/composite/miqa_ra_miqa_000000258883_jpeg_compression_2.png" width="18%"> 
+<img src="inference_results/image/det/composite/miqa_ra_miqa_000000258883_jpeg_compression_3.png" width="18%"> 
+<img src="inference_results/image/det/composite/miqa_ra_miqa_000000258883_jpeg_compression_4.png" width="18%"> 
+<img src="inference_results/image/det/composite/miqa_ra_miqa_000000258883_jpeg_compression_5.png" width="18%"> 
+</p> <p align="center"><em> Pretrained model: <b>RA-MIQA</b> | Trained label: <b>Composite Score</b> | Distortion type: <b>JPEG Compression</b> | Task: <b>Detection-oriented MIQA</b> </em></p> 
+</details>
+
+### 🎬 Video Assessment
+
+Video Quality Assessment offers two workflows: **(1) Frame-by-Frame Annotation**: Generates fully annotated videos for detailed visual inspection. Suitable for demos and qualitative analysis but computationally intensive.
+**(2) Selective Sampling & Aggregation**: Samples frames to produce plots and structured data (.json) for efficient, quantitative analysis. Ideal for batch processing and reporting.
+#### Analyze a Single Video (**Frame-by-Frame Annotation**)
+
+Run MIQA video inference for one video and save the annotated output. 
+```bash
+# Evaluate a single video using RA-MIQA (classification-oriented MIQA)
+python video_annotator_inference.py --input assets/demo_video/brightness_distorted.mp4 --task cls --model ra_miqa
+```
+
+#### Evaluate a Directory of Videos (**Frame-by-Frame Annotation**)
+Process all videos within a given folder:
+
+```bash
+# Assess all videos in a directory for object detection-oriented MIQA
+python video_annotator_inference.py --input assets/demo_video/ --task det --model ra_miqa
+```
+
+The primary output is a new `.mp4` video file. This video shows the original footage playing alongside a dynamic side panel that displays the real-time quality score and a line chart that grows as the video progresses.
+
+<details open>
+
+<summary>🎥 <b>Example: Frame-wise MIQA Predictions on Videos</b></summary> 
+
+| Brightness Variation | Compression Artifacts | Minimal Perceptual Distortion |
+| :---: | :---: | :---: |
+| <video src="https://github.com/user-attachments/assets/9b20cbc4-3baf-4d57-8d5f-49acd6873725" width="280" controls></video> | <video src="https://github.com/user-attachments/assets/c2fc142b-6889-4451-8a05-fb93e0ec0656" width="280" controls></video> | <video src="https://github.com/user-attachments/assets/14f4fc37-5ae5-4068-81f2-6f86bec30a27" width="280" controls></video> | 
 
 </details>
 
-### Batch Processing
+#### Analyze a Single Video (**Selective Sampling & Aggregation**)
 
-```python
-from machine_iqa import batch_assess
-import glob
+For efficient, quantitative analysis, this script samples frames from the video instead of processing all of them. It is significantly faster and designed for generating analytical reports.
 
-# Process entire directory
-image_paths = glob.glob('dataset/*.jpg')
-scores = batch_assess(image_paths, model_name='ra-miqa')
-
-for path, score in zip(image_paths, scores):
-    print(f"{path}: {score:.3f}")
+```bash
+# Analyze a video, sample frames, and create a dual-granularity plot
+python video_analytics_inference.py --input assets/demo_video/gaussian_distorted.mp4 --task ins --visualize --viz-granularity both
 ```
 
-### Video Assessment
+#### Evaluate a Directory of Videos (**Selective Sampling & Aggregation**)
 
-```python
-from machine_iqa import VideoMIQA
+This workflow is highly optimized for batch processing.
 
-# Initialize video assessor
-video_iqa = VideoMIQA('ra-miqa')
+```bash
+# Analyze all videos in a directory, sampling 120 frames from each
+python video_analytics_inference.py --input assets/demo_video/ --task det --video-frames 120 --visualize
 
-# Process video file
-results = video_iqa.assess_video('path/to/video.mp4')
-print(f"The distribution of quality scores: {results['mean_score']:.3f}")
+
+python video_analytics_inference.py --input assets/demo_video/jpeg_distorted.mp4  --task det --visualize --viz-granularity both
+# viz-granularity both : Specifies the type of plot to generate. 'composite' creates a comprehensive, side-by-side comparison chart showing:
+#1. The raw, frame-level quality scores. 2. The smoothed, per-second average quality scores.
 ```
+
+This process **does not create a new video**. Instead, it generates two key outputs for each video analyzed:
+1.  A **`.png` image**: A detailed time-series plot showing the quality score fluctuation over the video's duration.
+2.  A **`.json` file**: A structured data file containing per-second aggregated scores, overall statistics (average, min, max, std. dev), and video metadata.
+
+
 
 <details>
-<summary>🎥 Video Demo Results</summary>
+<summary>🎥 <b>Example: Frame-wise MIQA Predictions on Videos</b></summary>
 
-Sample video processing results:
-- **Frame-by-frame analysis**: Quality scores for each frame
-- **Temporal consistency**: Quality variation over time
-- **Key insights**: Identification of quality degradation points
-
+| Brightness Variation | Compression Artifacts |         Minimal Perceptual Distortion          |
+| :---: | :---: |:----------------------------------------------:|
+| <img src="inference_results/brightness_distorted_composite_quality_comparison.png" width="280"> | <img src="inference_results/jpeg_distorted_composite_quality_comparison.png" width="280"> | <img src="inference_results/B314_composite_quality_comparison.png" width="280"> |
+ 
 </details>
-
-### Real-time Camera Assessment
-
-```python
-from machine_iqa import RealTimeIQA
-import cv2
-
-# Initialize real-time assessor
-rt_iqa = RealTimeIQA('ra-miqa')  # Use lightweight model for speed
-
-# Start camera
-cap = cv2.VideoCapture(0)
-
-while True:
-    ret, frame = cap.read()
-    if not ret:
-        break
-    
-    # Assess frame quality
-    score = rt_iqa.assess_frame(frame)
-    
-    # Display result
-    cv2.putText(frame, f'Quality: {score:.3f}', (10, 30), 
-                cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-    cv2.imshow('Real-time IQA', frame)
-    
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
-
-cap.release()
-cv2.destroyAllWindows()
-```
 
 ## 🏃 Training and Evaluation
 
 ### Training 
 
 ```bash
-# Basic training
-python train.py --config configs/iqa_base.yaml --data_path /path/to/dataset
-
-# Advanced training with custom parameters
-python train.py \
-    --config configs/iqa_large.yaml \
-    --data_path /path/to/dataset \
-    --batch_size 32 \
-    --learning_rate 1e-4 \
-    --epochs 100 \
-    --gpu_ids 0,1
+CUDA_VISIBLE_DEVICES=0,1 python train.py \
+      --dataset 'miqa_cls' \
+      --path_miqa_cls 'path/to/datasets_miqa_cls' \
+      --train_split_file '../data/dataset_splitting/miqa_cls_train.csv' \
+      --val_split_file '../data/dataset_splitting//miqa_cls_val.csv' \
+      --metric_type 'composite' --loss_name 'mse' --is_two_transform \
+      -a 'RA-MIQA' --pretrained --transform_type 'simple_transform' \
+      -b 256 --epochs 5 --warmup_epochs 1 --validate_num 2 --lr 1e-4 \
+      --image_size 288 --crop_size 224 --workers 8 -p 100 \
+      --multiprocessing-distributed --world-size 1 --rank 0
 ```
+More training scripts are available in the "**scripts**" directory.
 
 ### Evaluation on Standard Benchmarks
 
 ```bash
-# Evaluate on test set
-python evaluate.py --model_path checkpoints/best_model.pth --test_data /path/to/test
+# Evaluate on miqa_cls val set
+python evaluate.py --model_name ra_miqa  --train_dataset cls  --test_dataset cls  --metric_type composite
 
-# Cross-dataset evaluation
-python evaluate.py --model_path checkpoints/best_model.pth --datasets miqa_cls
+# Cross-dataset evaluation: evaluate the RA-MIQA model trained on miqa_cls dataset and tested on miqa_det dataset
+python evaluate.py --model_name ra_miqa  --train_dataset cls  --test_dataset det  --metric_type composite
 ```
 
 ## 📈 Benchmarks
 
 <details>
-<summary>Tabel 1: Performance Benchmark on Composite Performance</summary>
+<summary>Tabel 1: Performance Benchmark on Composite Score</summary>
 
 <table>
 <thead>
@@ -835,4 +875,4 @@ We use `pytest` for testing. You can run the test suite to ensure your changes a
 ---
 **⭐ Star this repository if you find it helpful!😊**
 
-*Last updated: [09/26/2025]* 
+*Last updated: [10/25/2025]* 
