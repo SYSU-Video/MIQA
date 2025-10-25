@@ -151,8 +151,8 @@ pip install -r requirements.txt
 
 ## 🚀 Quick Start
 
-### Assess a Single Image
-
+### 🖼️ Assess Image
+#### Evaluate a Single Image
 Run MIQA inference for a single image using command-line interface:
 
 ```
@@ -180,20 +180,38 @@ python img_inference.py --input path/to/image.jpg --task cls --model ra_miqa --s
 # Save batch results and generate visualization for a directory
 python img_inference.py --input ./assets/demo_images/imagenet_demo --task ins --save-results --visualize
 ```
-<details> <summary>📸 <b>Results of MIQA Prediction</b></summary> <p align="center"> 
-<img src="inference_results/image/cls/composite/miqa_ra_miqa_ILSVRC2012_val_00024142_motion_blur_1.png" width="18%"> 
-<img src="inference_results/image/cls/composite/miqa_ra_miqa_ILSVRC2012_val_00024142_motion_blur_2.png" width="18%"> 
-<img src="inference_results/image/cls/composite/miqa_ra_miqa_ILSVRC2012_val_00024142_motion_blur_3.png" width="18%"> 
-<img src="inference_results/image/cls/composite/miqa_ra_miqa_ILSVRC2012_val_00024142_motion_blur_4.png" width="18%"> 
-<img src="inference_results/image/cls/composite/miqa_ra_miqa_ILSVRC2012_val_00024142_motion_blur_5.png" width="18%"> 
-</p> <p align="center"><em> Pretrained model: <b>RA-MIQA</b> | Trained label: <b>Composite Score</b> | Distortion type: <b>Motion Blur</b> | Task: <b>Classification-oriented MIQA</b> </em></p>
-<p align="center"> <img src="inference_results/image/det/composite/miqa_ra_miqa_000000258883_jpeg_compression_1.png" width="18%"> 
-<img src="inference_results/image/det/composite/miqa_ra_miqa_000000258883_jpeg_compression_2.png" width="18%"> 
-<img src="inference_results/image/det/composite/miqa_ra_miqa_000000258883_jpeg_compression_3.png" width="18%"> 
-<img src="inference_results/image/det/composite/miqa_ra_miqa_000000258883_jpeg_compression_4.png" width="18%"> 
-<img src="inference_results/image/det/composite/miqa_ra_miqa_000000258883_jpeg_compression_5.png" width="18%"> 
-</p> <p align="center"><em> Pretrained model: <b>RA-MIQA</b> | Trained label: <b>Composite Score</b> | Distortion type: <b>JPEG Compression</b> | Task: <b>Detection-oriented MIQA</b> </em></p> 
+<details open>
+<summary>📸 <b>Results of MIQA Prediction</b></summary>
+
+<small>
+
+<p align="center">
+<img src="inference_results/image/cls/composite/miqa_ra_miqa_ILSVRC2012_val_00024142_motion_blur_1.png" width="18%">
+<img src="inference_results/image/cls/composite/miqa_ra_miqa_ILSVRC2012_val_00024142_motion_blur_2.png" width="18%">
+<img src="inference_results/image/cls/composite/miqa_ra_miqa_ILSVRC2012_val_00024142_motion_blur_3.png" width="18%">
+<img src="inference_results/image/cls/composite/miqa_ra_miqa_ILSVRC2012_val_00024142_motion_blur_4.png" width="18%">
+<img src="inference_results/image/cls/composite/miqa_ra_miqa_ILSVRC2012_val_00024142_motion_blur_5.png" width="18%">
+</p>
+
+<p align="center"><em>
+Pretrained model: <b>RA-MIQA</b> | Trained label: <b>Composite Score</b> | Distortion type: <b>Motion Blur</b> | Task: <b>Classification-oriented MIQA</b>
+</em></p>
+
+<p align="center">
+<img src="inference_results/image/det/composite/miqa_ra_miqa_000000258883_jpeg_compression_1.png" width="18%">
+<img src="inference_results/image/det/composite/miqa_ra_miqa_000000258883_jpeg_compression_2.png" width="18%">
+<img src="inference_results/image/det/composite/miqa_ra_miqa_000000258883_jpeg_compression_3.png" width="18%">
+<img src="inference_results/image/det/composite/miqa_ra_miqa_000000258883_jpeg_compression_4.png" width="18%">
+<img src="inference_results/image/det/composite/miqa_ra_miqa_000000258883_jpeg_compression_5.png" width="18%">
+</p>
+
+<p align="center"><em>
+Pretrained model: <b>RA-MIQA</b> | Trained label: <b>Composite Score</b> | Distortion type: <b>JPEG Compression</b> | Task: <b>Detection-oriented MIQA</b>
+</em></p>
+
+</small>
 </details>
+
 
 ### 🎬 Video Assessment
 
@@ -257,7 +275,7 @@ This process **does not create a new video**. Instead, it generates two key outp
 
 
 <details>
-<summary>🎥 <b>Example: Frame-wise MIQA Predictions on Videos</b></summary>
+<summary>🎥 <b>Example: Selective Sampling MIQA Predictions on Videos</b></summary>
 
 | Brightness Variation | Compression Artifacts |         Minimal Perceptual Distortion          |
 | :---: | :---: |:----------------------------------------------:|
@@ -283,7 +301,7 @@ CUDA_VISIBLE_DEVICES=0,1 python train.py \
 ```
 More training scripts are available in the "**scripts**" directory.
 
-### Evaluation on Standard Benchmarks
+### Evaluation on Benchmarks
 
 ```bash
 # Evaluate on miqa_cls val set
