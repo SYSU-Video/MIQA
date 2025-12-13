@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <div align="center">
   <img src="./assets/logo1.png" alt="IQA Logo" width="1200"/>
@@ -848,3 +849,6 @@ All active development, maintenance, and future updates are conducted in the off
 
 Please refer to the original project for the latest code, documentation, and issue tracking.
 
+=======
+# MIQA
+>>>>>>> 912cdeaf257fd91480fb1135cc6eec21f0b43f75
