@@ -8,7 +8,6 @@
   [![Paper](https://img.shields.io/badge/arXiv-论文-red?style=flat-square)](https://arxiv.org/abs/2508.19850)
   [![HuggingFace](https://img.shields.io/badge/🤗-HuggingFace-yellow?style=flat-square)](https://huggingface.co/)
   [![Colab](https://img.shields.io/badge/Colab-教程-blue?style=flat-square)](link-to-colab)
-  [![GitHub Stars](https://img.shields.io/github/stars/XiaoqiWang/MIQA?style=social)](https://github.com/XiaoqiWang/MIQA)
   
 [中文](README_CN.md) | [English](README.md) | [Colab](colab-link) | [博客](blog-link)
 </div>
@@ -802,56 +801,12 @@ python evaluate.py --model_name ra_miqa  --train_dataset cls  --test_dataset det
   year={2025}
 }
 ```
+### ⚠️ 仓库声明
 
-## 🤝 贡献指南 （待办事项）
+此仓库是原始项目的副本，未来可能不会进行更新。
 
-我们非常欢迎来自社区的贡献！如果您有兴趣改进 MIQA，请查阅我们的 [贡献指南](CONTRIBUTING.md) 以了解提交错误报告、功能请求和代码合并请求（Pull Request）的详细流程。
+所有开发、维护和未来更新都在官方仓库进行：
 
-<details>
-<summary>开发环境配置</summary>
-请按照以下步骤配置您的本地开发环境：
+👉 https://github.com/XiaoqiWang/MIQA
 
-1.  **克隆本仓库：**
-    ```bash
-    git clone https://github.com/XiaoqiWang/MIQA.git
-    cd MIQA
-    ```
-
-2.  **以可编辑模式安装依赖：**
-    此命令会安装项目本身以及开发所需的额外依赖（如测试工具）。
-    ```bash
-    pip install -e ".[dev]"
-    ```
-
-3.  **设置 pre-commit 钩子：**
-    这能确保您提交的代码自动符合我们的代码风格规范。
-    ```bash
-    pre-commit install
-    ```
-
-### 运行测试
-
-我们使用 `pytest` 进行测试。您可以运行测试套件以确保您的更改没有破坏现有功能。
-
-1.  **运行所有测试：**
-    ```bash
-    pytest tests/
-    ```
-
-2.  **运行测试并生成覆盖率报告：**
-    要检查您的测试覆盖了多少代码，请运行：
-    ```bash
-    python -m pytest tests/ --cov=miqa # 请将 `miqa` 替换为您项目源码包的实际名称。
-    ```
-    
-</details> 
-
-## 📧 联系我们
-
-- **项目维护者**: [Xiaoqi Wang](mailto:wangxq79@mail2.sysu.edu.cn)
-- **问题反馈**: 请通过 [GitHub Issues](https://github.com/XiaoqiWang/MIQA/issues) 提交错误报告和功能建议。
-
----
-**⭐ 如果这个项目对您有帮助，请点亮 Star！😊**
-
-*最后更新于: [10/25/2025]*
+请访问原始项目以获取最新的代码、文档和问题跟踪信息。
