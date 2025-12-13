@@ -838,59 +838,13 @@ If you find this work useful in your research, please consider citing:
 ```
 
 
+### ⚠️ Repository Notice
 
-## 🤝 Contributing
-* [ ] TO DO : 
+This repository is a copied snapshot of the original project and may not receive future updates.
 
-We welcome contributions from the community! If you're interested in improving MIQA, please see our [Contributing Guidelines](CONTRIBUTING.md) for details on how to submit bug reports, feature requests, and pull requests.
+All active development, maintenance, and future updates are conducted in the official repository:
 
-</details>
+👉 https://github.com/XiaoqiWang/MIQA
 
-<details>
-<summary>Development Setup</summary>
-To set up your environment for local development, please follow these steps:
+Please refer to the original project for the latest code, documentation, and issue tracking.
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/XiaoqiWang/MIQA.git
-    cd MIQA
-    ```
-
-2.  **Install dependencies in editable mode:**
-    This command installs the project and the development-specific dependencies (like testing tools).
-    ```bash
-    pip install -e ".[dev]"
-    ```
-
-3.  **Set up pre-commit hooks:**
-    This ensures your code contributions adhere to our style guidelines automatically.
-    ```bash
-    pre-commit install
-    ```
-
-### Running Tests
-
-We use `pytest` for testing. You can run the test suite to ensure your changes are working correctly.
-
-1.  **Run all tests:**
-    ```bash
-    pytest tests/
-    ```
-
-2.  **Run tests with coverage report:**
-    To check how much of the code is covered by tests, run:
-    ```bash
-    python -m pytest tests/ --cov=miqa # Replace `miqa` with the actual name of your source package if it's different.
-    ```
-    
-</details> 
-
-## 📧 Contact
-
-- **Project Maintainer**: [Xiaoqi Wang](mailto:wangxq79@mail2.sysu.edu.cn)
-- **Issues**: Please use [GitHub Issues](https://github.com/XiaoqiWang/MIQA/issues) for bug reports and feature requests
-
----
-**⭐ Star this repository if you find it helpful!😊**
-
-*Last updated: [10/25/2025]* 
