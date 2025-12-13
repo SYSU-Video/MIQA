@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 <div align="center">
   <img src="./assets/logo1.png" alt="IQA Logo" width="1200"/>
   
@@ -10,7 +8,6 @@
   [![Paper](https://img.shields.io/badge/arXiv-Paper-red?style=flat-square)](https://arxiv.org/abs/2508.19850)
   [![HuggingFace](https://img.shields.io/badge/🤗-HuggingFace-yellow?style=flat-square)](https://huggingface.co/)
   [![Colab](https://img.shields.io/badge/Colab-Tutorial-blue?style=flat-square)](link-to-colab)
-  [![GitHub Stars](https://img.shields.io/github/stars/XiaoqiWang/MIQA?style=social)](https://github.com/XiaoqiWang/MIQA)
   
 [中文](README_CN.md) | [English](README.md) | [Colab](colab-link) | [博客](blog-link)
 </div>
@@ -848,7 +845,3 @@ All active development, maintenance, and future updates are conducted in the off
 👉 https://github.com/XiaoqiWang/MIQA
 
 Please refer to the original project for the latest code, documentation, and issue tracking.
-
-=======
-# MIQA
->>>>>>> 912cdeaf257fd91480fb1135cc6eec21f0b43f75
