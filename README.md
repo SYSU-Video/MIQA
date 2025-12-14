@@ -48,10 +48,11 @@
 -->
 
 ## 🔬 Research Background
+<p align="justify">
 - **Background**: Machine vision systems excel in controlled environments but suffer severe performance degradation from image distortions in real-world deployment. Traditional image quality assessment prioritizes human perceptual fidelity, creating a fundamental mismatch with machine sensitivities.
 
 - **Key Benefits**: The machine-centric framework enables quality monitoring across acquisition, transmission, and processing stages, ensuring reliable machine vision performance and supporting optimization of automated visual systems in adverse conditions.
-
+</p>
 
 ## ✨ Does MIQA Work?
 <div align="center">
@@ -212,11 +213,11 @@ Pretrained model: <b>RA-MIQA</b> | Trained label: <b>Composite Score</b> |
 
 
 ### 🎬 Video Assessment
-
+<p align="justify">
 Video Quality Assessment offers two workflows: **(1) Frame-by-Frame Annotation**: Generates fully annotated videos for detailed visual inspection. Suitable for demos and qualitative analysis but computationally intensive.
 **(2) Selective Sampling & Aggregation**: Samples frames to produce plots and structured data (.json) for efficient, quantitative analysis. Ideal for batch processing and reporting.
 #### Analyze a Single Video (**Frame-by-Frame Annotation**)
-
+</p>
 Run MIQA video inference for one video and save the annotated output. 
 ```bash
 # Evaluate a single video using RA-MIQA (classification-oriented MIQA)
